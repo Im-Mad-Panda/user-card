@@ -200,7 +200,7 @@ body {
   border-radius: 50%;
   border: 5px solid #000000;
   margin-bottom: 35px;
-  transition: 1s;
+  transition: 1.2s;
 }
 h1,
 p {
@@ -230,19 +230,28 @@ p {
   transition: height ease 1s;
   border-radius: 0 0 10px 10px;
   border-top: 10px solid #000000;
+  /* background: url('') no-repeat center / auto 100%; */
 }
 .overlay-img{
-  width: 205px;
-  height: 185px;
+  width: 300px;
+  height: auto;
   object-fit: cover;
-  cursor: pointer;
 }
 .wrapper:hover .overlay {
   height: 45%;
   box-shadow: 0 0 15px rgb(61, 146, 243);
 }
-.wrapper:hover .card-img {
+/* .wrapper:hover .card-img {
   transform-origin: 50% 50%;
   transform: scale(1.2);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
   
+} */
+.wrapper:hover .card-img {
+  -o-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  box-shadow: 0 0 15px rgb(0, 0, 0);
 }
