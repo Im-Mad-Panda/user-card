@@ -181,7 +181,7 @@ body {
   height: 500px;
   background-color: rgb(93, 190, 214);
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   position: relative;
   margin: 20px;
   border-radius: 10px;
@@ -193,13 +193,14 @@ body {
   min-height: 300px;
   align-items: center;
 }
-.card img {
+.card-img {
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #000000;
+  border: 5px solid #000000;
   margin-bottom: 35px;
+  transition: 1s;
 }
 h1,
 p {
@@ -216,6 +217,9 @@ p {
   font-weight: 400;
 }
 .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   background-color: #bdbdbd;
   width: 100%;
@@ -225,7 +229,20 @@ p {
   left: 0;
   transition: height ease 1s;
   border-radius: 0 0 10px 10px;
+  border-top: 10px solid #000000;
+}
+.overlay-img{
+  width: 205px;
+  height: 185px;
+  object-fit: cover;
+  cursor: pointer;
 }
 .wrapper:hover .overlay {
-  height: 55%;
+  height: 45%;
+  box-shadow: 0 0 15px rgb(61, 146, 243);
+}
+.wrapper:hover .card-img {
+  transform-origin: 50% 50%;
+  transform: scale(1.2);
+  
 }
